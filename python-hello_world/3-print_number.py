@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 
-# Use Python to print an integer
+# Print the integer stored in the variable number, followed by Battery street
+
 
