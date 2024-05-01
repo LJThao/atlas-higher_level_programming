@@ -5,4 +5,4 @@
 number = 3.14159
 f1 = "Float:"
 
-print(f"{f1} {number}")
+print(f"{f1} {number: .2f}")
