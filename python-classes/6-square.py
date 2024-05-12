@@ -4,6 +4,8 @@ Coordinates of a square: Write a class Square
 """
 
 class Square:
+    """Class defines a square"""
+
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
