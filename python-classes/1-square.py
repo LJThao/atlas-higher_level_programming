@@ -5,8 +5,9 @@ Write a class Square
 
 
 class Square:
-    """Private attribute"""
+    """Class to define a square"""
     
     def __init__(self, size):
+        """Private attribute"""
 
     self.___size = size
