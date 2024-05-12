@@ -3,6 +3,7 @@
 Coordinates of a square: Write a class Square
 """
 
+
 class Square:
     """Class defines a square"""
 
