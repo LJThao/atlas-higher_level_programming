@@ -1,4 +1,4 @@
-#1/usr/bin/python3
+#!/usr/bin/python3
 """
 Coordinates of a square: Write a class Square
 """
