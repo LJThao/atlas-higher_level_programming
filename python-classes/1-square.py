@@ -6,6 +6,4 @@ class Square:
     """Class to define a square"""
 
     def __init__(self, size):
-        """Private attribute"""
-
-    self.__size = size
+        self.__size = size
