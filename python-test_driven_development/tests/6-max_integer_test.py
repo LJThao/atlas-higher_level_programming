@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Max integer - Unittesy
+"""Max integer - Unittest
 """
 
 import unittest
