@@ -29,3 +29,6 @@ class TestMaxInteger(unittest.TestCase):
     
     def zero_int(self):
         self.assertEqual(max_integer([0, 0, 0, 0]), 0)
+
+if __name__ == "__main__":
+    unittest.main()
