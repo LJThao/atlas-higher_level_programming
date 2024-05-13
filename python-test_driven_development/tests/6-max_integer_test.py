@@ -12,7 +12,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_max_end(self):
         """function for max at the end"""
 
-        self.assertEqual(max_integer([20, -10, 310, 55]), 310)
+        self.assertEqual(max_integer([20, -10, 55, 310]), 310)
         
     def test_max_begin(self):
         """function for max at the beginning"""
