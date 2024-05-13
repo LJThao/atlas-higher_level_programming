@@ -2,7 +2,7 @@ Import function for my module:
 
     >>> text_indentation = __import__('5-text_indentation').text_indentation
     
-    text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    >>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     <BLANKLINE>
     Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere?
     <BLANKLINE>
@@ -20,4 +20,6 @@ Import function for my module:
     <BLANKLINE>
     beatiorem! Iam ruinas videres""")
 
-    text_indentation()
+    >>> text_indentation("")
+    
+    
