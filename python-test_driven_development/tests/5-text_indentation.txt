@@ -22,5 +22,11 @@ Import function for my module:
 
     >>> text_indentation("")
 
-    >>> text_indentation("     Atlas School     ")
-    Atlas School
+    >>> text_indentation("     Holberton School     ")
+    Holberton School
+
+    >>> text_indentation("Holberton School")
+    Holberton School
+
+    >>> text_indentation("Holberton School? How are you: John?")
+    Holberton School? How are you: John?
