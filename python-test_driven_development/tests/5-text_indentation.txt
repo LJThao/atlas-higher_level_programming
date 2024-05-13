@@ -21,5 +21,6 @@ Import function for my module:
     beatiorem! Iam ruinas videres""")
 
     >>> text_indentation("")
-    
-    
+
+    >>> text_indentation("     Atlas School     ")
+    Atlas School
