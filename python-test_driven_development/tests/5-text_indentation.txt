@@ -20,4 +20,5 @@ Import function for my module:
     <BLANKLINE>
     beatiorem! Iam ruinas videres""")
 
-    >>> text_indentation("Atlas School)
+    >>> text_indentation()
+    print output
