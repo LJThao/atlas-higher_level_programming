@@ -22,7 +22,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_max_mid(self):
         """function for max in the middle"""
 
-        self.assertEqual(max_integer([1, 4, 2, 3]), 2)
+        self.assertEqual(max_integer([1, 4, 2, 3]), 4)
         
     def test_one_int(self):
         """function for one int"""
@@ -42,7 +42,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_neg_int(self):
         """function for negative int"""
 
-        self.assertEqual(max_integer([-1, -2, -3, -4, -5]), -4)
+        self.assertEqual(max_integer([-1, -2, -3, -4, -5]), -1)
     
     def test_zero_int(self):
         """function for 0 int"""
