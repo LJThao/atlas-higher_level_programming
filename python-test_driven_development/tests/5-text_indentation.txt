@@ -21,3 +21,5 @@ Import function for my module:
     beatiorem! Iam ruinas videres""")
 
     >>> text_indentation("")
+
+TypeError exception with the message text must be a string

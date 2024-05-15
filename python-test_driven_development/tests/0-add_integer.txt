@@ -7,8 +7,18 @@ Import function for my module:
     >>> add_integer(100, -2)
     98
 
-    >>> add_integer(2.1)
+    >>> add_integer(2)
     100
     
     >>> add_integer(100.3, -2)
     98
+
+    >>> add_integer(4, "School")
+    ... except Exception as e:
+    ... print(e)
+
+    >>> add_integer(None)
+    ... except Exception as e:
+    ... print(e)
+
+TypeError exception with the message a must be an integer or b must be an integer
