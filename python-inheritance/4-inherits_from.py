@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """This function will return True if
-the object is an instance of a class 
+the object is an instance of a class
 that inherited (directly or indirectly)
-from the specified class; otherwise 
+from the specified class; otherwise
 False"""
 
 
