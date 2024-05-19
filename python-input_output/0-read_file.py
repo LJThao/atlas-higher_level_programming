@@ -7,4 +7,4 @@ def read_file(filename=""):
     """Function to read UTF8 file"""
 
     with open(filename) as f:
-        print(f.read())
+        print(f.read(), end="")
