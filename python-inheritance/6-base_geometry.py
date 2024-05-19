@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """This function will write a
-class BaseGeometry 
+class BaseGeometry
 (based on 5-base_geometry.py)"""
 
 
