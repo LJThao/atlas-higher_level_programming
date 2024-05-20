@@ -19,7 +19,9 @@ class Student:
         of a Student instance"""
 
         if isinstance(attrs, list) and all(isinstance(i, str) for i in attrs):
-            return {attr: getattr(self, attr) for attr in attrs
-        if hasattr(self, attr)}
+            return {
+                attr: getattr(self, attr) for attr in attrs
+                if hasattr(self, attr)
+            }
 
         return (self.__dict__)
