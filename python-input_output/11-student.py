@@ -23,7 +23,7 @@ class Student:
             and all(isinstance(attr, str) for attr in attrs)
         ):
             return {
-                attr: getattr(self, attr) for attr in attrs 
+                attr: getattr(self, attr) for attr in attrs
                 if hasattr(self, attr)
             }
 
