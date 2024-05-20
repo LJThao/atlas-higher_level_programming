@@ -18,9 +18,11 @@ class Student:
         """Function that retrieves a dictionary rep of a
         Student instance"""
 
-        if isinstance(attrs, list) and all(isinstance(attr, str) for attr in attrs):
+        if isinstance(attrs, list) and all(isinstance(attr, str) for attr in
+        attrs):
             return {
-                attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)
+                attr: getattr(self, attr) for attr in attrs 
+                if hasattr(self, attr)
             }
 
         return (self.__dict__)
