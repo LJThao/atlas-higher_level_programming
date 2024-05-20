@@ -40,20 +40,3 @@ new_student_1.reload_from_json(j_student_1)
 print(new_student_1)
 print(type(new_student_1))
 print("{} {} {}".format(new_student_1.first_name, new_student_1.last_name, new_student_1.age))
-
-guillaume@ubuntu:~/$ ./11-main.py student.json
-Initial student:
-<11-student.Student object at 0x7f832826eda0>
-<class '11-student.Student'>
-<class 'dict'>
-John Doe 23
-{"last_name": "Doe", "first_name": "John", "age": 23}
-Saved to disk
-Fake student:
-<11-student.Student object at 0x7f832826edd8>
-<class '11-student.Student'>
-Fake Fake 89
-Load dictionary from file:
-<11-student.Student object at 0x7f832826edd8>
-<class '11-student.Student'>
-John Doe 23
