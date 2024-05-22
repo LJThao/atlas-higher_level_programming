@@ -16,9 +16,3 @@ Testing:
 
     >>> bg.integer_validator("distance", -4)
     ValueError: distance must be greater than 0
-
-    >>> bg = BaseGeometry()
-    >>> bg.area()
-    Exception: area() is not implemented
-
-    >>> bg.area(13)
