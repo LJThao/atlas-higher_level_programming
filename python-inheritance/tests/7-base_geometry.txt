@@ -27,4 +27,3 @@ Testing:
     Traceback (most recent call last):
         ...
     Exception: area() is not implemented
-    
