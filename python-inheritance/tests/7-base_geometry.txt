@@ -1,6 +1,10 @@
 Importing the function from my module:
     >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
+    >>> bg = __import__("7-base_geometry").__doc__
+    >>> len(bg) > 1
+    True
+
 Testing:
     >>> bg = BaseGeometry()
 
@@ -19,7 +23,3 @@ Testing:
 
     >>> bg.area()
     Exception: area() is not implemented
-
-    >>> bg = __import__("7-base_geometry").__doc__
-    >>> len(bg) > 1
-    True
