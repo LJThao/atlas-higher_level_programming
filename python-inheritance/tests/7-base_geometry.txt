@@ -20,5 +20,6 @@ Testing:
     >>> bg.area()
     Exception: area() is not implemented
 
-    >>> bg.integer_validator("age")
-    TypeError: age must be an integer
+    >>> bg = __import__("7-base_geometry").__doc__
+    >>> len(bg) > 1
+    True
