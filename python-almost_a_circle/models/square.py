@@ -2,7 +2,7 @@
 """Created Class Square Module"""
 
 
-from models.rectangle import Rectangle
+from models.base import Base
 
 
 class Square(Rectange):
