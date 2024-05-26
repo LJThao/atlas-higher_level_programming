@@ -43,3 +43,10 @@ class Base:
         if json_string is None or not json_string:
             return ([])
         return (json.loads(json_string))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Function returns an dummmy instance of assign attrs"""
+        dummy = cls(1, 1) if cls.__name__ == "Rectange" else cls(1)
+        dummy.update(**ditionary)
+        return (dummy)
