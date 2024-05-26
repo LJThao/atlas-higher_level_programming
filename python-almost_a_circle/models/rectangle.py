@@ -69,3 +69,19 @@ class Rectangle(Base):
     def area(self):
         """Function that returns the area value of Rectangle"""
         return (self.width * self.height)
+    
+    def display(self):
+        """Function that prints in stdout the Rectangle instance
+        with the character #"""
+        print("\n" * self.y, end="")
+
+        for i in range(self.height):
+            print(" " * self.x + "#" * self.width)
+
+    def __str__(self):
+        """Function that returns format string [Rectangle]
+        (<id>) <x>/<y> - <width>/<height>"""
+        return ("[{}] ({}) {}/{} - {}/{}".format(type(self).__name__,
+        self.id, self.__x, self.__y, self.__width, self.__height))
+    
+    
