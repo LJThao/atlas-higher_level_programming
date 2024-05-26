@@ -47,6 +47,6 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Function returns an dummmy instance of assign attrs"""
-        dummy = cls(1, 1) if cls.__name__ == "Rectange" else cls(1)
+        dummy = cls(1, 1) if cls.__name__ == "Rectangle" else cls(1)
         dummy.update(**ditionary)
         return (dummy)
