@@ -28,3 +28,14 @@ class Square(Rectangle):
         """Function to validate the same value"""
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """Function thaht assigns an argument to attributes"""
+        attrs = ["id", "size", "x", "y"]
+
+        for i, arg in enumerate(args):
+            if i < len(attrs):
+                setattr(self, attrs[i], arg)
+        
+        for key, value in kwargs.items():
+            setattr(self, key, value)
