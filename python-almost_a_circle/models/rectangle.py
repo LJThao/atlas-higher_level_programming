@@ -55,12 +55,13 @@ class Rectangle(Base):
         self.validate_integers("y", value, True)
         self.__y = value
 
-    def validate_integers(self, name, value, eq=True):
+    def validate_integers(self, name, value, eq):
         """Validating integers"""
         if not isinstance(value, int):
             raise TypeError(f"{name} must be an integer")
-        if eq and value < 0:
-            raise ValueError(f"{name} must be >= 0")
+        if eq:
+            if value < 0:
+                raise ValueError(f"{name} must be >= 0")
         else:
             if value <= 0:
                 raise ValueError(f"{name} must be > 0")
