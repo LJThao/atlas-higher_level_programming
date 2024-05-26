@@ -82,7 +82,8 @@ class Rectangle(Base):
         """Function that returns format string [Rectangle]
         (<id>) <x>/<y> - <width>/<height>"""
         return ("[{}] ({}) {}/{} - {}/{}".format(
-            type(self).__name__,self.id, self.__x, self.__y, self.__width, self.__height)
+            type(self).__name__, self.id, self.__x, self.__y,
+                self.__width, self.__height)
         )
 
     def update(self, *args, **kwargs):
@@ -97,5 +98,6 @@ class Rectangle(Base):
             setattr(self, key, value)
 
     def to_dictionary(self):
-        """Function that returns the dictionary representation of Rectangle"""
+        """Function that returns the dictionary
+        representation of Rectangle"""
         return ({"id": self.id, "width": self.width, "height": self.height, "x": self.x, "y": self.y})
