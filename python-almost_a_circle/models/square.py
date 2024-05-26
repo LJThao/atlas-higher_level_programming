@@ -15,5 +15,5 @@ class Square(Rectangle):
         """Returning format string
         [Square] (<id>) <x>/<y> - <size>"""
         return ("[{}] ({}) {}/{} - {}".format(
-            (self).__name__, self.id, self.x, self.y, self.width)
+            self.__name__, self.id, self.x, self.y, self.width)
         )
