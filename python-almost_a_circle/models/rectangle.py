@@ -98,7 +98,7 @@ class Rectangle(Base):
             setattr(self, key, value)
 
     def to_dictionary(self):
-        """Function that returns the dictionary
+       """Function that returns the dictionary
         representation of Rectangle"""
         return ({"id": self.id, "width": self.width, "height": self.height,
                 "x": self.x, "y": self.y})
