@@ -65,11 +65,11 @@ class Rectangle(Base):
         else:
             if value <= 0:
                 raise ValueError(f"{name} must be > 0")
-    
+
     def area(self):
         """Function that returns the area value of Rectangle"""
         return (self.width * self.height)
-    
+
     def display(self):
         """Function that prints in stdout the Rectangle instance
         with the character #"""
@@ -81,8 +81,9 @@ class Rectangle(Base):
     def __str__(self):
         """Function that returns format string [Rectangle]
         (<id>) <x>/<y> - <width>/<height>"""
-        return ("[{}] ({}) {}/{} - {}/{}".format(type(self).__name__,
-        self.id, self.__x, self.__y, self.__width, self.__height))
+        return ("[{}] ({}) {}/{} - {}/{}".format(type(
+        ).__name__,self.id, self.__x, self.__y, self.__width, self.__height)
+        )
     
     def update(self, *args, **kwargs):
         """Function that assigns an argument to attributes"""
@@ -91,7 +92,6 @@ class Rectangle(Base):
         for i, arg in enumerate(args):
             if i < len(attrs):
                 setattr(self, attrs[i], arg)
-        
+
         for key, value in kwargs.items():
             setattr(self, key, value)
-    
