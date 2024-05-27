@@ -42,10 +42,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual(json_list, [expected_dict])
         self.assertIsInstance(json_dictionary, str)
 
-if __name__ == "__main__":
-    unittest.main()
-
-
 # Tests for Rectangle Module
 class TestRectangle(unittest.TestCase):
 
