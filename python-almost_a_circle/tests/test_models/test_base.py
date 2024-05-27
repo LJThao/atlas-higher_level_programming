@@ -3,6 +3,7 @@
 
 
 import unittest
+import json
 from models.base import Base
 from models.rectangle import Rectangle
 
@@ -32,9 +33,13 @@ class TestBase(unittest.TestCase):
         dictionary = r1.to_dictionary()
         json_dictionary = Base.to_json_string([dictionary])
 
-        self.assertEqual(dictionary, {'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8})
+        expected_dict = {'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8}
+
+        json_list = json.loads(json_dictionary)
+
+        self.assertEqual(dictionary, expected_dict)
         self.assertIsInstance(dictionary, dict)
-        self.assertEqual(json_dictionary, '[{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]')
+        self.assertEqual(json_list, [expected_dict])
         self.assertIsInstance(json_dictionary, str)
 
 if __name__ == "__main__":
