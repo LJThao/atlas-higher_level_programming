@@ -50,7 +50,12 @@ class TestBase(unittest.TestCase):
     def test_to_json_string_args(self):
         with self.assertRaises(TypeError):
             Base.to_json_string([], 1)
-    
+
+    def test_to_json_string_list(self):
+        list_dictionaries = [{"key": "value"}, {"key": "value"}]
+        json_string = Base.to_json_string(list_dictionaries)
+        self.assertEqual(json_string, '[{"key": "value"}, {"key": "value"}]')
+
     def test_from_json_string_none(self):
         json_string = None
         result = Base.from_json_string(json_string)
