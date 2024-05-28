@@ -23,7 +23,7 @@ class TestBase(unittest.TestCase):
     def test_id_add(self):
         b1 = Base()
         b2 = Base()
-        self.assertEqual(b2.id, b1.id +1)
+        self.assertEqual(b1.id +1, b2.id)
     
     def test_specific_id(self):
         b4 = Base(12)
