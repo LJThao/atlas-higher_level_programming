@@ -84,8 +84,13 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(json.loads(data), expected_output)
 
     def test_rectangle_inv_args(self):
-        with self.assertRaises(TypeError):
-            r = Rectangle("1", 2)
+        cases = [
+            ("1", 2), (1, "2"), (1, 2, "3"), (1, 2, 3, "4"), (-1, 2), (1, -2),
+            (0, 2), (1, 0), (1, 2, -3), (1, 2, 3, -4)
+            ]
+        for args in cases:
+            with self.assertRaises((TypeError, ValueError)):
+                Rectangle(*args)
 
 if __name__ == '__main__':
     unittest.main()
