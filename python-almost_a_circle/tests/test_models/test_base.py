@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Class Base Module Tests"""
+"""Module Tests"""
 
 
 import unittest
@@ -42,6 +42,17 @@ class TestBase(unittest.TestCase):
         self.assertIsInstance(dictionary, dict)
         self.assertEqual(json_list, [expected_dict])
         self.assertIsInstance(json_dictionary, str)
+
+    def test_base_json_string_none(self):
+        self.assertEqual("[]", Base.to_json_string([]))
+
+    def test_to_json_0_args(self):
+        with self.assertRaises(TypeError):
+            Base.to_json_string()
+
+    def test_base_json_string_args(self):
+        with self.assertRaises(TypeError):
+            Base.to_json_string([], 1)
 
 class TestRectangle(unittest.TestCase):
     """Class to test the save_to_file method of the Rectangle"""
