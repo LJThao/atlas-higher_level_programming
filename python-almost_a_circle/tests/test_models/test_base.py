@@ -47,9 +47,14 @@ class TestBase(unittest.TestCase):
         json_string = Base.to_json_string(None)
         self.assertEqual(json_string, "[]")
 
-    def test_base_json_string_args(self):
+    def test_to_json_string_args(self):
         with self.assertRaises(TypeError):
             Base.to_json_string([], 1)
+    
+    def test_from_json_string_none(self):
+        json_string = None
+        result = Base.from_json_string(json_string)
+        self.assertEqual(result, [])
 
 class TestRectangle(unittest.TestCase):
     """Class to test the save_to_file method of the Rectangle"""
