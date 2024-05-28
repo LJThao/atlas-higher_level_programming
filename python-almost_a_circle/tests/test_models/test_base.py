@@ -23,7 +23,7 @@ class TestBase(unittest.TestCase):
     def test_id_add(self):
         b1 = Base()
         b2 = Base()
-        self.assertEqual(b1.id +1, b2.id)
+        self.assertEqual(b2.id, b1.id +1)
     
     def test_specific_id(self):
         b4 = Base(12)
@@ -100,7 +100,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.area(), 50)
     
     def test_rectangle_str_method(self):
-        r = Rectangle(5, 10)
+        r = Rectangle(5, 10, 1, 2, 99)
         self.assertTrue(hasattr(r, "__str__"))
         self.assertTrue(callable(getattr(r, "__str__")))
 
