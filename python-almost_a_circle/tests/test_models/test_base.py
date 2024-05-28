@@ -98,6 +98,10 @@ class TestRectangle(unittest.TestCase):
     def test_rectangle_area(self):
         r = Rectangle(5, 10)
         self.assertEqual(r.area(), 50)
+    
+    def test_rectangle_str_method(self):
+        r = Rectangle(5, 10)
+        self.assertTrue(hasattr(r, "__str__"))
 
 if __name__ == '__main__':
     unittest.main()
