@@ -92,5 +92,11 @@ class TestRectangle(unittest.TestCase):
             with self.assertRaises((TypeError, ValueError)):
                 Rectangle(*args)
 
+    def test_rectangle_more_inv_args(self):
+        try:
+            r = Rectangle(1, 2, 3, 4, 5)
+        except TypeError:
+            pass
+
 if __name__ == '__main__':
     unittest.main()
