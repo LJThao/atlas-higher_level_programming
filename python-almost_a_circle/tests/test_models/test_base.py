@@ -95,5 +95,9 @@ class TestRectangle(unittest.TestCase):
     def test_rectangle_more_inv_args(self):
         self.assertEqual(5, Rectangle(1, 2, 3, 4, 5).id)
 
+    def test_rectangle_area(self):
+        r = Rectangle(5, 10)
+        self.assertEqual(r.area(), 50)
+
 if __name__ == '__main__':
     unittest.main()
