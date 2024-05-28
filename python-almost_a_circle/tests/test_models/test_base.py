@@ -4,11 +4,12 @@
 
 import unittest
 import json
+import os
 from models.base import Base
 from models.rectangle import Rectangle
 
 
-# Tests for Base Module
+# Tests for Modules
 class TestBase(unittest.TestCase):
     """Class to test the Base Class"""
     def test_ids(self):
@@ -41,6 +42,33 @@ class TestBase(unittest.TestCase):
         self.assertIsInstance(dictionary, dict)
         self.assertEqual(json_list, [expected_dict])
         self.assertIsInstance(json_dictionary, str)
+
+class TestRectangle(unittest.TestCase):
+    """Class to test the save_to_file method of the Rectangle"""
+    def setUp(self):
+        self.rectangle1 = Rectangle(10, 7, 2, 8)
+        self.rectangle2 = Rectangle(2, 4)
+        Rectangle.save_to_file([self.rectangle1, self.rectangle2])
+
+        file_name = "Rectangle.json"
+        if not os.path.exists(file_name):
+            with open(file_name, "w") as file:
+                file.write("[]")
+
+    def tearDown(self):
+        file_name = "Rectangle.json"
+        if os.path.exists(file_name):
+            os.remove(file_name)
+
+    def test_save_to_file(self):
+        file_name = "Rectangle.json"
+        with open("Rectangle.json", "r") as file:
+            data = file.read()
+        expected_output = [
+            {"id": self.rectangle1.id, "width": 10, "height": 7, "x": 2, "y": 8},
+            {"id": self.rectangle2.id, "width": 2, "height": 4, "x": 0, "y": 0}
+        ]
+        self.assertEqual(json.loads(data), expected_output)
 
 if __name__ == '__main__':
     unittest.main()
