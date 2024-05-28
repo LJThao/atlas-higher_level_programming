@@ -101,8 +101,7 @@ class TestRectangle(unittest.TestCase):
     
     def test_rectangle_str_method(self):
         r = Rectangle(5, 10, 1, 2, 99)
-        self.assertTrue(hasattr(r, "__str__"))
-        self.assertTrue(callable(getattr(r, "__str__")))
+        self.assertEqual(str(r), "[Rectangle] (99) 1/2 - 5/10")
 
 if __name__ == '__main__':
     unittest.main()
