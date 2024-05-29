@@ -103,6 +103,22 @@ class TestRectangle(unittest.TestCase):
     def test_rectangle_str_method(self):
         r = Rectangle(5, 10, 1, 2, 99)
         self.assertEqual(str(r), "[Rectangle] (99) 1/2 - 5/10")
+   
+    def test_rectangle_update(self):
+        r = Rectangle(1, 2, 3, 4)
+        self.assertTrue(hasattr(r, 'update'))
+        self.assertTrue(callable(getattr(r, 'update')))
+
+        r.update(89)
+        r.update(89, 1)
+        r.update(89, 1, 2)
+        r.update(89, 1, 2, 3)
+        r.update(89, 1, 2, 3, 4)
+        r.update(**{'id': 89})
+        r.update(**{'id': 89, 'width': 1})
+        r.update(**{'id': 89, 'width': 1, 'height': 2})
+        r.update(**{'id': 89, 'width': 1, 'height': 2, 'x': 3})
+        r.update(**{'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
 
 class TestSquare(unittest.TestCase):
     """Class to test the Square"""
