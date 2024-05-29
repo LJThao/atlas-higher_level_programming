@@ -106,7 +106,7 @@ class TestRectangle(unittest.TestCase):
 
 class TestSquare(unittest.TestCase):
     """Class to test the Square"""
-    def test_init(self):
+    def test_init_square(self):
         s1, s2, s3, s4 = Square(1), Square(1, 2), Square(1, 2, 3), Square(1, 2, 3, 4)
         self.assertEqual((s1.size, s1.x, s1.y), (1, 0, 0))
         self.assertEqual((s2.size, s2.x, s2.y), (1, 2, 0))
@@ -116,6 +116,15 @@ class TestSquare(unittest.TestCase):
         for args in [("1",), (1, "2"), (1, 2, "3"), (-1,), (1, -2), (1, 2, -3), (0,)]:
             with self.assertRaises((TypeError, ValueError)):
                 Square(*args)
+
+    def test_square_str_method(self):
+        s1, s2 = Square(1), Square(1, 2, 3, 4)
+        self.assertEqual(str(s1), f"[Square] ({s1.id}) 0/0 - 1")
+        self.assertEqual(str(s2), "[Square] (4) 2/3 - 1")
+
+    def test_to_square_dic(self):
+        s = Square(1, 2, 3, 4)
+        self.assertDictEqual(s.to_dictionary(), {"id": 4, "size": 1, "x": 2, "y": 3})
 
 if __name__ == '__main__':
     unittest.main()
