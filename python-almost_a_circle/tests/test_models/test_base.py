@@ -126,5 +126,12 @@ class TestSquare(unittest.TestCase):
         s = Square(1, 2, 3, 4)
         self.assertDictEqual(s.to_dictionary(), {"id": 4, "size": 1, "x": 2, "y": 3})
 
+    def test_square_update(self):
+        s = Square(1)
+        s.update(89, 2, 3, 4)
+        self.assertEqual((s.id, s.size, s.x, s.y), (89, 2, 3, 4))
+        s.update(id=90, size=3, x=4, y=5)
+        self.assertEqual((s.id, s.size, s.x, s.y), (90, 3, 4, 5))
+
 if __name__ == '__main__':
     unittest.main()
