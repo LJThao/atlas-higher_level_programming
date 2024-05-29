@@ -7,6 +7,7 @@ import json
 import os
 from models.base import Base
 from models.rectangle import Rectangle
+from models.square import Square
 
 
 # Tests for Modules
@@ -57,7 +58,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(result, [])
 
 class TestRectangle(unittest.TestCase):
-    """Class to test the save_to_file method of the Rectangle"""
+    """Class to test the Rectangle"""
     def setUp(self):
         self.rectangle1 = Rectangle(10, 7, 2, 8)
         self.rectangle2 = Rectangle(2, 4)
@@ -102,6 +103,19 @@ class TestRectangle(unittest.TestCase):
     def test_rectangle_str_method(self):
         r = Rectangle(5, 10, 1, 2, 99)
         self.assertEqual(str(r), "[Rectangle] (99) 1/2 - 5/10")
+
+class TestSquare(unittest.TestCase):
+    """Class to test the Square"""
+    def test_init(self):
+        s1, s2, s3, s4 = Square(1), Square(1, 2), Square(1, 2, 3), Square(1, 2, 3, 4)
+        self.assertEqual((s1.size, s1.x, s1.y), (1, 0, 0))
+        self.assertEqual((s2.size, s2.x, s2.y), (1, 2, 0))
+        self.assertEqual((s3.size, s3.x, s3.y), (1, 2, 3))
+        self.assertEqual((s4.size, s4.x, s4.y, s4.id), (1, 2, 3, 4))
+
+        for args in [("1",), (1, "2"), (1, 2, "3"), (-1,), (1, -2), (1, 2, -3), (0,)]:
+            with self.assertRaises((TypeError, ValueError)):
+                Square(*args)
 
 if __name__ == '__main__':
     unittest.main()
