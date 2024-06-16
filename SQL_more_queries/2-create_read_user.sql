@@ -4,4 +4,4 @@ CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
 CREATE USER IF NOT EXISTS 'user_0d_2'@'localhost' IDENTIFIED BY 'user_0d_2_pwd';
 -- create a new user with a password if the user doesn't exist
 GRANT SELECT ON hbtn_0d_2.* TO 'user_0d_2'@'localhost';
--- grant the user permission to select data from all tables from the database
+-- grant the user permission to select data from all the tables in the database
