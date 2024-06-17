@@ -25,9 +25,9 @@ def connect_mysql():
         WHERE name LIKE BINARY '{}' \
         ORDER BY states.id ASC".format(argv[4])
     )
-    values = cur.fetchall()
-    for value in values:
-        print(value)
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
 
 if __name__ == "__main__":
     connect_mysql()

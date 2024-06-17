@@ -20,9 +20,9 @@ def connect_mysql():
 
     cur = db.cursor()
     cur.execute("SELECT * FROM states")
-    states = cur.fetchall()
-    for state in states:
-        print(state)
+    rows = cur.fetchall()
+    for row in rows:
+        print(rows)
 
 if __name__ == '__main__':
     connect_mysql()
