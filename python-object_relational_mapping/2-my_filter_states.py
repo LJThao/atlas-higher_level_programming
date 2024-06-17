@@ -12,11 +12,11 @@ def connect_mysql():
     """Connect to a MySQL server running on localhost
     at port 3306"""
     db = MySQLdb.connect(
-    user=argv[1],
-    passwd=argv[2],
-    db=argv[3],
-    host="localhost",
-    port = 3306
+        user=argv[1],
+        passwd=argv[2],
+        db=argv[3],
+        host="localhost",
+        port = 3306
     )
 
     cur = db.cursor()
