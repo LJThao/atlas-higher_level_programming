@@ -1,10 +1,10 @@
 -- Lists all the cities of California that can be found in the database hbtn_0d_usa.
-SELECT , cities.id
+SELECT id, name
 FROM cities
-WHERE cities.state_id =
+WHERE state_id IN
 (
     SELECT id
     FROM states
-    WHERE name = 'California'
+    WHERE name = "California"
 )
-ORDER BY cities.id ASC;
+ORDER BY id;
