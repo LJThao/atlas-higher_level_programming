@@ -32,5 +32,6 @@ def connect_mysql():
             city_names = ", ".join([row[1] for row in rows])
             print(city_names)
 
+
 if __name__ == "__main__":
     connect_mysql()
