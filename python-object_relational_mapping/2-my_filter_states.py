@@ -16,8 +16,8 @@ def connect_mysql():
         passwd=argv[2],
         db=argv[3],
         host="localhost",
-        port = 3306
-    )
+        port=3306
+        )
 
     cur = db.cursor()
     cur.execute(
@@ -28,6 +28,7 @@ def connect_mysql():
     rows = cur.fetchall()
     for row in rows:
         print(row)
+
 
 if __name__ == "__main__":
     connect_mysql()
