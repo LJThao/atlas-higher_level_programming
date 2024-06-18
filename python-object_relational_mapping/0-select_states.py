@@ -22,7 +22,7 @@ def connect_mysql():
     cur.execute("SELECT * FROM states")
     rows = cur.fetchall()
     for row in rows:
-        print(rows)
+        print(row)
 
 if __name__ == '__main__':
     connect_mysql()
