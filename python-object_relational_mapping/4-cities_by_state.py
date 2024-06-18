@@ -30,5 +30,6 @@ def connect_mysql():
             for row in rows:
                 print(row)
 
+
 if __name__ == "__main__":
     connect_mysql()
