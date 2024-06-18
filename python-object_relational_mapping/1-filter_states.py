@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Lists all states with a name starting with N 
+"""Lists all states with a name starting with N
 (upper N) from the database hbtn_0e_0_usa:"""
 
 
@@ -12,11 +12,11 @@ def connect_mysql():
     localhost at port 3306"""
     db = MySQLdb.connect(
         user=argv[1],
-        passwd=argv[2], 
-        db=argv[3], 
+        passwd=argv[2],
+        db=argv[3],
         host="localhost",
-        port = 3306
-    )
+        port=3306
+        )
 
     cur = db.cursor()
     cur.execute(
@@ -27,6 +27,7 @@ def connect_mysql():
     rows = cur.fetchall()
     for row in rows:
         print(row)
+
 
 if __name__ == '__main__':
     connect_mysql()
