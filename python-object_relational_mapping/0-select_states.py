@@ -15,7 +15,7 @@ def connect_mysql():
         passwd=argv[2],
         db=argv[3],
         host="localhost",
-        port = 3306
+        port=3306
         )
 
     cur = db.cursor()
