@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const language = "C is fun";
+const language = 'C is fun';
 
 if (isNaN(process.argv[2])) {
   console.log('Missing number of occurrences');
