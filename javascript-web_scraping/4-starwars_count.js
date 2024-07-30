@@ -7,8 +7,7 @@ const characterId = 18;
 const characterurl = `https://swapi-api.hbtn.io/api/people/${characterId}/`;
 
 request(url, (error, response, body) => {
-  if (error)
-    return console.error(error);
+  if (error) { return console.error(error); }
 
   const data = JSON.parse(body);
   const count = data.results
