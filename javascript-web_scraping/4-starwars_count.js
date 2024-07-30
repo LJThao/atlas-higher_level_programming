@@ -2,29 +2,19 @@
 
 const request = require('request');
 
-const url = process.argv[2];
-const characterId = 18;
-const characterurl = `https://swapi-api.hbtn.io/api/people/${characterId}/`;
+const url = process.argv[2] || 'https://swapi-api.hbtn.io/api/films/';
+const characterId = '/18/';
 
 request(url, (error, response, body) => {
   if (error) {
-    console.error('Request Error:', error);
+    console.error('Error:', error);
     return;
   }
 
   try {
-    const data = JSON.parse(body);
-
-    console.log('API Response:', data);
-
-    if (!data.results || !Array.isArray(data.results)) {
-      console.error('Error: Unexpected data structure.');
-      process.exit(1);
-    }
-
-    const count = data.results
-      .filter(movie => movie.characters && movie.characters.includes(characterurl))
-      .length;
+    const films = JSON.parse(body).results;
+    const count = films.reduce((acc, film) =>
+      acc + film.characters.some(url => url.includes(characterId)), 0);
 
     console.log(count);
   } catch (parseError) {
