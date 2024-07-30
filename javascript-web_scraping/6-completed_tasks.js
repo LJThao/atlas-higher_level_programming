@@ -17,15 +17,9 @@ request(url, (error, _, body) => {
     }
   });
 
-  const formatTasks = (tasks) => {
-    return `{ ${Object.entries(tasks)
-      .map(([key, value]) => `'${key}': ${value}`)
-      .join(', ')} }`;
-  };
-
   if (userId) {
     console.log(`${userId}: ${tasks[userId] || 0}`);
   } else {
-    console.log(formatTasks(tasks));
+    console.log(JSON.stringify(tasks));
   }
 });
