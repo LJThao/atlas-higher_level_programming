@@ -1,5 +1,3 @@
-#!/usr/bin/node
-
 $(document).ready(function () {
   $('DIV#toggle_header').click(function () {
     if ($(this).hasClass('red')) {
