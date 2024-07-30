@@ -4,7 +4,7 @@ const request = require('request');
 
 const url = process.argv[2];
 const characterId = 18;
-const characterurl = `https://swapi-api.hbtn.io/api/people/${characterId}/`;
+const characterurl = `https://swapi-api.hbtn.io/api/films/${characterId}/`;
 
 request(url, (error, response, body) => {
   if (error) { return console.error(error); }
