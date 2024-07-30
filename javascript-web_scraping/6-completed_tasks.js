@@ -3,9 +3,10 @@
 const request = require('request');
 
 const url = process.argv[2];
+const userId = parseInt(process.argv[3], 10);
 
 request(url, (error, _, body) => {
-  if (error) { return console.error(error); }
+  if (error) return console.error(error);
 
   const todos = JSON.parse(body);
   const tasks = {};
@@ -16,5 +17,11 @@ request(url, (error, _, body) => {
     }
   });
 
-  console.log(`${userId}: ${tasks[userId]}`);
+  if (userId) {
+    console.log(`${userId}: ${tasks[userId] || 0}`);
+  } else {
+    for (const [id, count] of Object.entries(tasks)) {
+      console.log(`${id}: ${count}`);
+    }
+  }
 });
