@@ -20,8 +20,6 @@ request(url, (error, _, body) => {
   if (userId) {
     console.log(`${userId}: ${tasks[userId] || 0}`);
   } else {
-    for (const [id, count] of Object.entries(tasks)) {
-      console.log(`${id}: ${count}`);
-    }
+    console.log(JSON.stringify(tasks));
   }
 });
